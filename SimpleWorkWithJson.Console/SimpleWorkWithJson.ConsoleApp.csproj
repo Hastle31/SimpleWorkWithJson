@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <RootNamespace>SimpleWorkWithJson.ConsoleApp</RootNamespace>
+    <AssemblyName>SimpleWorkWithJson.ConsoleApp</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Ninject" Version="3.3.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SimpleWorkWithJson.Common\SimpleWorkWithJson.Common.csproj" />
+    <ProjectReference Include="..\SimpleWorkWithJson.DataAccess\SimpleWorkWithJson.DataAccess.csproj" />
+    <ProjectReference Include="..\SimpleWorkWithJson.Domain\SimpleWorkWithJson.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Sample.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
