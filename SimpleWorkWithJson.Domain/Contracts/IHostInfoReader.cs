@@ -6,8 +6,15 @@ using System.Threading.Tasks;
 
 namespace SimpleWorkWithJson.Domain.Contracts
 {
+    /// <summary>
+    /// Интерфейс чтения хостов.
+    /// </summary>
     public interface IHostInfoReader
     {
+        /// <summary>
+        /// Получить хосты.
+        /// </summary>
+        /// <returns>Возвращает список хостов.</returns>
         Task<List<HostInfo>> ReadAsync();
     }
 }
