@@ -21,7 +21,7 @@ namespace SimpleWorkWithJson.Domain.Services
 
         public async Task<HostInfoAnalyzeResult> AnalyzeHostsAsync()
         {
-            logger.Log(LogLevel.Debug, "Started analyze hosts");
+            logger.Log(LogLevel.Information, "Started analyze hosts");
 
             var res = await hostInfoService.AnalyzeHostsAsync();
 
@@ -30,7 +30,7 @@ namespace SimpleWorkWithJson.Domain.Services
             sb.AppendLine($"{res.HostsCount} hosts was analyzed.");
             sb.AppendLine($"{res.SuccessAnalyzedHostCount} of them are successful analyzed.");
             sb.AppendLine(string.Format("Results {0} saved", res.HostInfoSuccessSaved ? "successfully" : "are not"));
-            logger.Log(LogLevel.Debug, sb.ToString());
+            logger.Log(LogLevel.Information, sb.ToString());
 
             return res;
         }
